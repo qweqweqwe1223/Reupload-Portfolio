@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Center Text + Floating Circles</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    main {
+      height: 100vh;
+      width: 100vw;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+    }
+
+    section:nth-child(1) { background: #111; }
+    section:nth-child(2) { background: #222; }
+    section:nth-child(3) { background: #333; }
+
+    /* 가운데 고정 텍스트 */
+    .center-text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      z-index: 10;
+      pointer-events: none; /* 마우스 클릭 무시 */
+    }
+
+    /* 원 기본 스타일 */
+    .circle {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="center-text">PORTFOLIO</div>
+  <main>
+    <section>
+      <div class="circle" style="top: 80%"></div>
+    </section>
+    <section>
+      <div class="circle" style="top: 80%"></div>
+    </section>
+    <section>
+      <div class="circle" style="top: 80%"></div>
+    </section>
+  </main>
+
+  <script>
+    const circles = document.querySelectorAll(".circle");
+    const main = document.querySelector("main");
+
+    main.addEventListener("scroll", () => {
+      const scrollY = main.scrollTop;
+      circles.forEach((circle, i) => {
+        // i에 따라 속도 차이를 줘서 자연스러운 패럴랙스 효과
+        circle.style.transform = `translate(-50%, calc(${scrollY * -0.3 - i*200}px))`;
+      });
+    });
+  </script>
+</body>
+</html>
