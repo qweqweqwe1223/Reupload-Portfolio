@@ -173,19 +173,42 @@ uiuxArea3.addEventListener("mouseleave", () => {
 
 
 
-const wrap = document.querySelector('.wrap');
-const popup = document.getElementById('popup');
-const openBtns = document.querySelectorAll('.openPopup');
-const closePopup = document.getElementById('closePopup');
+// const wrap = document.querySelector('.wrap');
+// const popup = document.getElementById('popup');
+// const openBtns = document.querySelectorAll('.openPopup');
+// const closePopup = document.getElementById('closePopup');
 
-openBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
+// openBtns.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     popup.classList.add('active');
+//     wrap.style.overflow = 'hidden'; 
+//   });
+// });
+
+// closePopup.addEventListener('click', () => {
+//   popup.classList.remove('active');
+//   wrap.style.overflowY = 'scroll'; 
+// });
+
+const wrap = document.querySelector('.wrap');
+const openBtns = document.querySelectorAll('.openPopup');
+const popups = document.querySelectorAll('.popup');
+const closeBtns = document.querySelectorAll('.closePopup');
+
+// 슬라이드 클릭 → 해당 팝업 열기
+openBtns.forEach(openBtn => {
+  openBtn.addEventListener('click', () => {
+    const target = openBtn.dataset.popup;
+    const popup = document.querySelector(`.popup[data-popup="${target}"]`);
     popup.classList.add('active');
-    wrap.style.overflow = 'hidden'; 
+    wrap.style.overflow = 'hidden';
   });
 });
 
-closePopup.addEventListener('click', () => {
-  popup.classList.remove('active');
-  wrap.style.overflowY = 'scroll'; 
+// 팝업 닫기
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.popup').classList.remove('active');
+    wrap.style.overflow = 'auto';
+  });
 });

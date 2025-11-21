@@ -256,7 +256,6 @@ section.sustainable p {
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
-
 }
 
 
@@ -267,6 +266,7 @@ section.sustainable i {
   border-radius: 999px;
   background: #D9D9D9;
   transition: none;
+  transition: all 0.5s;
 }
 
 .first {
@@ -276,11 +276,21 @@ section.sustainable i {
   height: 308px;
 }
 
+.first:hover {
+  top: 12%;
+  left: 11%;
+}
+
 .second {
   top: 13%;
   right: 13%;
   width: 230px;
   height: 230px;
+}
+
+.second:hover {
+  top: 14%;
+  right: 15%;
 }
 
 .third {
@@ -290,6 +300,11 @@ section.sustainable i {
   height: 166px;
 }
 
+.third:hover {
+  bottom: 16%;
+  left: 16%;
+}
+
 .fourth {
   bottom: 7%;
   right: 10%;
@@ -297,9 +312,39 @@ section.sustainable i {
   height: 369px;
 }
 
+.fourth:hover {
+  bottom: 8%;
+  right: 11%;
+}
 
-section.sustainable i:hover {
-  background: #999;
+section.sustainable i::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(0,0,0,1), rgba(0,0,0,0));
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.section.sustainable i.second::after {
+background: linear-gradient(-135deg, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.section.sustainable i.third::after {
+background: linear-gradient(45deg, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.section.sustainable i.fourth::after {
+background: linear-gradient(-45deg, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+section.sustainable i:hover::after {
+  opacity: 1;
 }
 
 section.sustainable .arrow {
@@ -691,7 +736,7 @@ section.contact .text p::after {
   color: var(--white);
 }
 
-#closePopup {
+.closePopup {
   width: 40px;
   height: 30px;
   position: absolute;
@@ -700,7 +745,7 @@ section.contact .text p::after {
   cursor: pointer;
 }
 
-#closePopup i {
+.closePopup i {
   top: 50%;
   left: 0;
   position: absolute;
@@ -711,15 +756,15 @@ section.contact .text p::after {
   transform-origin: center;
 }
 
-#closePopup i:first-child {
+.closePopup i:first-child {
   transform: rotate(45deg);
 }
 
-#closePopup i:last-child {
+.closePopup i:last-child {
   transform: rotate(-45deg);
 }
 
-#closePopup:hover i {
+.closePopup:hover i {
   transform: rotate(360deg);
 }
 
@@ -749,8 +794,28 @@ section.contact .text p::after {
   height: 500px;
   background: url(../img/jejudamda_full_01.png) no-repeat;
   background-size: cover;
-  background-position: center -50px;
+  background-position: center -40px;
 }
+
+
+.popup-content .gongcha_thumb {
+  background: url(../img/gongcha_full.png) no-repeat;
+  background-size: cover;
+  background-position: center -1950px;
+}
+
+.popup-content .lively_thumb {
+  background: url(../img/lively_full.png) no-repeat;
+  background-size: cover;
+  background-position: center -120px;
+}
+
+.popup-content .video_thumb {
+  background: url(../img/busan_full.png) no-repeat;
+  background-size: cover;
+  background-position: center -120px;
+}
+
 
 .popup-content figure div {
   position: absolute;

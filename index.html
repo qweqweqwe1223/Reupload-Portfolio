@@ -131,25 +131,25 @@
 
         <div class="swiper-wrapper">
           <div class="swiper-slide jejudamda">
-            <div class="hover openPopup">
+            <div class="hover openPopup" data-popup="jejudamda">
               <span>Detail View</span>
               <span>제주소개 웹페이지 '제주담다' <br> 메인코딩, 서브페이지 디자인</span>
             </div>
           </div>
           <div class="swiper-slide gongcha">
-            <div class="hover">
+            <div class="hover openPopup" data-popup="gongcha">
               <span>Detail View</span>
               <span>공차 웹페이지 리디자인&퍼블리싱</span>
             </div>
           </div>
           <div class="swiper-slide music">
-            <div class="hover">
+            <div class="hover openPopup" data-popup="lively">
               <span>Detail View</span>
               <span>'LIVELY' 웹페이지 디자인&퍼블리싱</span>
             </div>
           </div>
           <div class="swiper-slide video">
-            <div class="hover">
+            <div class="hover openPopup" data-popup="video">
               <span>Detail View</span>
               <span>부산 국제 영화제 웹페이지 클론코딩</span>
             </div>
@@ -224,10 +224,12 @@
       </div>
     </section>
 
+    <!-- 팝업창 리스트 -->
+    <!-- 제주담다 -->
 
-    <div class="popup" id="popup">
+    <div class="popup" data-popup="jejudamda">
       <div class="popup-content">
-        <button id="closePopup">
+        <button class="closePopup">
           <i></i>
           <i></i>
         </button>
@@ -251,11 +253,112 @@
         </div>
 
         <div class="popupImg">
-          <figure class="longPage"><img src="img/jejudamda_full_01.png" alt=""></figure>
-          <figure class="longPage"><img src="img/jejudamda_full_02.png" alt=""></figure>
+          <figure class="longPage"><img src="img/jejudamda_full_01.png" alt="제주담다 풀페이지1"></figure>
+          <figure class="longPage"><img src="img/jejudamda_full_02.png" alt="제주담다 풀페이지2"></figure>
         </div>
       </div>
     </div>
+
+
+    <!-- 공차 웹페이지 -->
+
+    <div class="popup" data-popup="gongcha">
+      <div class="popup-content">
+        <button class="closePopup">
+          <i></i>
+          <i></i>
+        </button>
+        <h2>Detail View</h2>
+        <figure class="gongcha_thumb">
+          <div>
+            <a href="https://qweqweqwe1223.github.io/JejuDamda-web-design/index.html" target="_blank"><span>웹사이트 이동</span></a>
+          </div>
+          <!-- <img src="img/jejudamda.png" alt="제주담다썸네일"> -->
+        </figure>
+        <p class="projectName">공차 웹페이지 리디자인 프로젝트</p>
+        <p class="projectDate">2025.08.10 - 09.25</p>
+
+        <div class="description">
+          <p class="desName">overview</p>
+          <p>Nibh eget pulvinar nisi in. In aenean commodo vitae id habitant duis phasellus. Et in eleifend magnis libero neque vitae amet facilisis volutpat. Nec at auctor nulla non id. Metus dui a risus interdum risus pharetra amet. Posuere eget nullam a mauris condimentum. Rhoncus aliquet posuere amet arcu. Volutpat pellentesque purus suspendisse donec. Ornare adipiscing ridiculus sodales faucibus dignissim dolor et sit aliquam. Adipiscing eget adipiscing odio adipiscing ultrices placerat.</p>
+        </div>
+        <div class="description">
+          <p class="desName">skill & Detail</p>
+          <p>Nibh eget pulvinar nisi in. In aenean commodo vitae id habitant duis phasellus. Et in eleifend magnis libero neque vitae amet facilisis volutpat. Nec at auctor nulla non id. Metus dui a risus interdum risus pharetra amet. Posuere eget nullam a mauris condimentum. Rhoncus aliquet posuere amet arcu. Volutpat pellentesque purus suspendisse donec. Ornare adipiscing ridiculus sodales faucibus dignissim dolor et sit aliquam. Adipiscing eget adipiscing odio adipiscing ultrices </p>
+        </div>
+
+        <div class="popupImg">
+          <figure class="longPage"><img src="img/gongcha_full.png" alt="공차 풀페이지"></figure>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 라이블리 -->
+    <div class="popup" data-popup="lively" >
+      <div class="popup-content">
+        <button class="closePopup">
+          <i></i>
+          <i></i>
+        </button>
+        <h2>Detail View</h2>
+        <figure class="lively_thumb">
+          <div>
+            <a href="https://qweqweqwe1223.github.io/JejuDamda-web-design/index.html" target="_blank"><span>웹사이트 이동</span></a>
+          </div>
+          <!-- <img src="img/jejudamda.png" alt="제주담다썸네일"> -->
+        </figure>
+        <p class="projectName">'LIVELY' 웹페이지 디자인&퍼블리싱</p>
+        <p class="projectDate">2025.07.16 - 07.19</p>
+
+        <div class="description">
+          <p class="desName">overview</p>
+          <p>Nibh eget pulvinar nisi in. In aenean commodo vitae id habitant duis phasellus. Et in eleifend magnis libero neque vitae amet facilisis volutpat. Nec at auctor nulla non id. Metus dui a risus interdum risus pharetra amet. Posuere eget nullam a mauris condimentum. Rhoncus aliquet posuere amet arcu. Volutpat pellentesque purus suspendisse donec. Ornare adipiscing ridiculus sodales faucibus dignissim dolor et sit aliquam. Adipiscing eget adipiscing odio adipiscing ultrices placerat.</p>
+        </div>
+        <div class="description">
+          <p class="desName">skill & Detail</p>
+          <p>Nibh eget pulvinar nisi in. In aenean commodo vitae id habitant duis phasellus. Et in eleifend magnis libero neque vitae amet facilisis volutpat. Nec at auctor nulla non id. Metus dui a risus interdum risus pharetra amet. Posuere eget nullam a mauris condimentum. Rhoncus aliquet posuere amet arcu. Volutpat pellentesque purus suspendisse donec. Ornare adipiscing ridiculus sodales faucibus dignissim dolor et sit aliquam. Adipiscing eget adipiscing odio adipiscing ultrices </p>
+        </div>
+
+        <div class="popupImg">
+          <figure class="longPage"><img src="img/lively_full.png" alt="라이블리 풀페이지"></figure>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- 부산 국제 영화제 -->
+    <div class="popup" data-popup="video" >
+      <div class="popup-content">
+        <button class="closePopup">
+          <i></i>
+          <i></i>
+        </button>
+        <h2>Detail View</h2>
+        <figure class="video_thumb">
+          <div>
+            <a href="https://qweqweqwe1223.github.io/JejuDamda-web-design/index.html" target="_blank"><span>웹사이트 이동</span></a>
+          </div>
+          <!-- <img src="img/jejudamda.png" alt="제주담다썸네일"> -->
+        </figure>
+        <p class="projectName">부산 국제 영화제 웹페이지 클론코딩</p>
+        <p class="projectDate">2025.07.20 - 07.22</p>
+
+        <div class="description">
+          <p class="desName">overview</p>
+          <p>Nibh eget pulvinar nisi in. In aenean commodo vitae id habitant duis phasellus. Et in eleifend magnis libero neque vitae amet facilisis volutpat. Nec at auctor nulla non id. Metus dui a risus interdum risus pharetra amet. Posuere eget nullam a mauris condimentum. Rhoncus aliquet posuere amet arcu. Volutpat pellentesque purus suspendisse donec. Ornare adipiscing ridiculus sodales faucibus dignissim dolor et sit aliquam. Adipiscing eget adipiscing odio adipiscing ultrices placerat.</p>
+        </div>
+        <div class="description">
+          <p class="desName">skill & Detail</p>
+          <p>Nibh eget pulvinar nisi in. In aenean commodo vitae id habitant duis phasellus. Et in eleifend magnis libero neque vitae amet facilisis volutpat. Nec at auctor nulla non id. Metus dui a risus interdum risus pharetra amet. Posuere eget nullam a mauris condimentum. Rhoncus aliquet posuere amet arcu. Volutpat pellentesque purus suspendisse donec. Ornare adipiscing ridiculus sodales faucibus dignissim dolor et sit aliquam. Adipiscing eget adipiscing odio adipiscing ultrices </p>
+        </div>
+
+        <div class="popupImg">
+          <figure class="longPage"><img src="img/busan_full.png"라이블리 풀페이지"></figure>
+        </div>
+      </div>
+    </div>
+
 
 
   </div>
