@@ -190,12 +190,14 @@ uiuxArea3.addEventListener("mouseleave", () => {
 //   wrap.style.overflowY = 'scroll'; 
 // });
 
+
+//data-를 활용한 forEach 문법!!!!
 const wrap = document.querySelector('.wrap');
 const openBtns = document.querySelectorAll('.openPopup');
 const popups = document.querySelectorAll('.popup');
 const closeBtns = document.querySelectorAll('.closePopup');
 
-// 슬라이드 클릭 → 해당 팝업 열기
+
 openBtns.forEach(openBtn => {
   openBtn.addEventListener('click', () => {
     const target = openBtn.dataset.popup;
@@ -205,7 +207,7 @@ openBtns.forEach(openBtn => {
   });
 });
 
-// 팝업 닫기
+
 closeBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     btn.closest('.popup').classList.remove('active');
