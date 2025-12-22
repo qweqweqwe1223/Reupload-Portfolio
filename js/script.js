@@ -214,3 +214,73 @@ closeBtns.forEach(btn => {
     wrap.style.overflow = 'auto';
   });
 });
+
+
+const otherOpens = document.querySelectorAll('.otherOpen');
+const otherPopup = document.querySelectorAll('.other_popup');
+const otherCloses = document.querySelectorAll('.dim');
+
+otherOpens.forEach(otherOpen => {
+  otherOpen.addEventListener('click', () => {
+    const openTarget = otherOpen.dataset.popup; 
+    const targetPopup = document.querySelector(`.other_popup[data-popup="${openTarget}"]`);
+    targetPopup.classList.add('active');
+  })
+})
+
+otherCloses.forEach(otherClose => {
+  otherClose.addEventListener('click', () => {
+    otherClose.closest('.other_popup').classList.remove('active');
+  })
+})
+
+
+// uiux 팝업창 열기 ==========================================
+
+
+// Proto Popup
+const openUiux1 = document.querySelector('.uiux_list.list1');
+const Proto = document.querySelector('.swiper.proto');
+const closeUiux1 = document.querySelectorAll('.proto .uiux_dim');
+
+openUiux1.addEventListener('click', () => {
+  Proto.classList.add('active');
+})
+
+closeUiux1.forEach(dim => {
+  dim.addEventListener('click', () => {
+    Proto.classList.remove('active');
+  });
+});
+
+
+// meal Alone Popup
+const openUiux2 = document.querySelector('.uiux_list.list2');
+const mealAlone = document.querySelector('.swiper.mealAlone');
+const closeUiux2 = document.querySelectorAll('.mealAlone .uiux_dim');
+
+openUiux2.addEventListener('click', () => {
+  mealAlone.classList.add('active');
+})
+
+closeUiux2.forEach(dim => {
+  dim.addEventListener('click', () => {
+    mealAlone.classList.remove('active');
+  });
+});
+
+
+// Gifty Popup
+const openUiux3 = document.querySelector('.uiux_list.list3');
+const gifty = document.querySelector('.swiper.gifty');
+const closeUiux3 = document.querySelectorAll('.gifty .uiux_dim');
+
+openUiux3.addEventListener('click', () => {
+  gifty.classList.add('active');
+})
+
+closeUiux3.forEach(dim => {
+  dim.addEventListener('click', () => {
+    gifty.classList.remove('active');
+  });
+});

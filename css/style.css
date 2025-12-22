@@ -325,22 +325,22 @@ section.sustainable i::after {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(0,0,0,1), rgba(0,0,0,0));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s;
 }
 
 .section.sustainable i.second::after {
-background: linear-gradient(-135deg, rgba(0,0,0,1), rgba(0,0,0,0));
+  background: linear-gradient(-135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .section.sustainable i.third::after {
-background: linear-gradient(45deg, rgba(0,0,0,1), rgba(0,0,0,0));
+  background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .section.sustainable i.fourth::after {
-background: linear-gradient(-45deg, rgba(0,0,0,1), rgba(0,0,0,0));
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 section.sustainable i:hover::after {
@@ -403,27 +403,25 @@ section.web_design .inner .swiper_button {
 }
 
 
-.swiper-button-next,
-.swiper-button-prev {
+section.web_design .swiper-button-next,
+section.web_design .swiper-button-prev {
   margin: 0;
   padding: 0;
   left: 0;
 }
 
-.swiper-button-next {
+section.web_design .swiper-button-next {
   left: 100px;
 }
 
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+section.web_design .swiper-button-next::after,
+section.web_design .swiper-button-prev::after {
   font-size: 30px;
-  /* 화살표 아이콘 크기 */
   color: #fff;
-  /* 색상 */
 }
 
-.swiper.webswiper {
+section.web_design .swiper.webswiper {
   position: absolute;
   width: 1200px;
   height: auto;
@@ -433,44 +431,44 @@ section.web_design .inner .swiper_button {
 }
 
 
-.swiper-wrapper {
+section.web_design .swiper-wrapper {
   width: auto;
   height: auto;
 }
 
-.swiper-slide {
+section.web_design .swiper-slide {
   width: 500px;
   height: 320px;
   background: #7e7e7e;
 }
 
 
-.swiper-slide.jejudamda {
+section.web_design .swiper-slide.jejudamda {
   background: url(../img/jejudamda.png) no-repeat top/cover;
 }
 
-.swiper-slide.gongcha {
+section.web_design .swiper-slide.gongcha {
   background: url(../img/gongcha.png) no-repeat top/cover;
 }
 
-.swiper-slide.music {
+section.web_design .swiper-slide.music {
   background: url(../img/music.png) no-repeat top/cover;
 }
 
-.swiper-slide.video {
+section.web_design .swiper-slide.video {
   background: url(../img/video.png) no-repeat top/cover;
 }
 
-.swiper-slide.rbfy {
+section.web_design .swiper-slide.rbfy {
   background: url(../img/rbfy.png) no-repeat top/cover;
 }
 
 
-.swiper-slide:nth-child(even) {
+.swiper.webswiper .swiper-slide:nth-child(even) {
   margin-top: 60px;
 }
 
-.swiper-slide .hover {
+section.web_design .swiper-slide .hover {
   opacity: 0;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -484,12 +482,12 @@ section.web_design .inner .swiper_button {
   cursor: pointer;
 }
 
-.swiper-slide .hover span {
+section.web_design .swiper-slide .hover span {
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
-.swiper-slide:hover .hover {
+section.web_design .swiper-slide:hover .hover {
   opacity: 1;
 }
 
@@ -610,6 +608,129 @@ section.uiux .uiux_list span {
   opacity: 0.8;
 }
 
+/* uiux popup =============================================== */
+
+.swiper-button-next {
+  right: 50px;
+}
+
+.swiper-button-prev {
+  left: 50px;
+}
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fff;   
+  font-size: 50px;
+}
+
+/* Proto 팝업 */
+
+.swiper.proto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.swiper.proto .uiux_dim {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.swiper.proto.active {
+  opacity: 1; 
+  pointer-events: auto;
+}
+
+.swiper.proto .uiux_dim img {
+  width: 60%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* MealAlone 팝업 */
+
+.swiper.mealAlone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.swiper.mealAlone .uiux_dim {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.swiper.mealAlone.active {
+  opacity: 1; 
+  pointer-events: auto;
+}
+
+.swiper.mealAlone .uiux_dim img {
+  width: 60%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* 기프티 팝업 */
+
+.swiper.gifty {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.swiper.gifty .uiux_dim {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.swiper.gifty.active {
+  opacity: 1; 
+  pointer-events: auto;
+}
+
+.swiper.gifty .uiux_dim img {
+  width: 60%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* cursur */
 
 .cur {
@@ -647,6 +768,137 @@ section.uiux .uiux_list span {
 .cur.uiux_cur3.active {
   opacity: 1;
 }
+
+
+/* section other ============================ */
+
+.section.other {
+  position: relative;
+  padding: 120px 0;
+}
+
+.section.other .swiper-slide {
+  height: 320px;
+  background: #818181;
+}
+
+.section.other .inner h2 {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+
+.section.other .inner>p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 80px;
+}
+
+
+.section.other .swiper-slide .other_hover {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.705);
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(3px);
+}
+
+.section.other .swiper-slide .other_hover span:first-child {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.swiper.otherslide {
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.swiper.otherslide .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper.otherslide .swiper-pagination-bullet {
+  background: rgb(151, 151, 151);
+}
+
+.swiper.otherslide .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+.section.other .swiper-slide:hover .other_hover {
+  opacity: 1;
+}
+
+.section.other .swiper-slide:first-child {
+  background: url(../img/sns광고1.png) no-repeat center/cover;
+}
+
+.section.other .swiper-slide:nth-child(2) {
+  background: url(../img/sns광고2.png) no-repeat center/cover;
+}
+
+
+/* More Works의 각 슬라이드 팝업창입니다. */
+
+.other_popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.other_popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.other_popup .dim {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+}
+
+.other_popup .dim span {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.other_popup .dim .hover_img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto;
+}
+
+.other_popup.active {
+  opacity: 1;
+}
+
+
 
 
 /* section contact */
@@ -865,9 +1117,10 @@ section.contact .text p::after {
 }
 
 .description p {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
+  word-break: keep-all;
 }
 
 .description .desName {
