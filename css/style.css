@@ -12,6 +12,11 @@ body {
   overflow: hidden;
 }
 
+.wrap::-webkit-scrollbar {
+  display: none;
+}
+
+
 .wrap {
   height: 100vh;
   width: 100vw;
@@ -809,6 +814,7 @@ section.uiux .uiux_list span {
   align-items: center;
   flex-direction: column;
   backdrop-filter: blur(3px);
+  cursor: pointer;
 }
 
 .section.other .swiper-slide .other_hover span:first-child {
@@ -843,12 +849,29 @@ section.uiux .uiux_list span {
 }
 
 .section.other .swiper-slide:first-child {
-  background: url(../img/sns광고1.png) no-repeat center/cover;
+  background: url(../img/sns광고2.png) no-repeat center/cover;
 }
 
 .section.other .swiper-slide:nth-child(2) {
-  background: url(../img/sns광고2.png) no-repeat center/cover;
+  background: url(../img/morewroks/postcard.png) no-repeat center/cover;
 }
+
+.section.other .swiper-slide:nth-child(3) {
+  background: url(../img/morewroks/Pin-Button-Badge-Mockup\ 1.png) no-repeat center/cover;
+}
+
+.section.other .swiper-slide:nth-child(4) {
+  background: url(../img/morewroks/package.png) no-repeat center/cover;
+}
+
+.section.other .swiper-slide:nth-child(5) {
+  background: url(../img/morewroks/3d_thumb.png) no-repeat center/cover;
+}
+
+.section.other .swiper-slide:nth-child(6) {
+  background: url(../img/morewroks/motion_thumb.png) no-repeat center/cover;
+}
+
 
 
 /* More Works의 각 슬라이드 팝업창입니다. */
@@ -874,6 +897,7 @@ section.uiux .uiux_list span {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(2px);
+  overflow-y: auto;
 }
 
 .other_popup .dim span {
@@ -898,7 +922,62 @@ section.uiux .uiux_list span {
   opacity: 1;
 }
 
+/* postcard  */
 
+.other_popup .dim .hover_img .popup_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.other_popup .dim .hover_img.multiple_img img {
+  position: static;
+  top: 0; left: 0;
+  transform: translate(0);
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+.other_popup .dim .hover_img.multiple_img .widthUp {
+  width: 70%;
+}
+
+/* package popup */
+
+.other_popup .dim .hover_img .package_notice {
+  width: 200px;
+  font-size: 20px;
+  position: fixed;
+  top: 50%; right: 4%;
+  left: auto;
+  transform: translate(-50%);
+  transform: translateX(0);
+}
+
+.other_popup .dim .hover_img .package {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: auto;
+}
+
+/* motion graphics */
+
+.other_popup.motion .dim .hover_img .popup_video {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+}
 
 
 /* section contact */
@@ -1148,7 +1227,49 @@ section.contact .text p::after {
   padding-bottom: 50px;
 }
 
+
+
 /* 반응형 */
+
+@media screen and (max-width: 1600px) {
+  .inner {
+    max-width: 1200px;
+  }
+
+  .section.web_design .inner {
+    max-width: 1200px;
+  }
+  
+  .responsive_notice {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  background: #3838389d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.responsive_notice.show {
+  opacity: 1;
+}
+
+.responsive_notice.eventout {
+  pointer-events: none;
+}
+
+.responsive_notice p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+}
+
 
 @media screen and (max-width: 1500px) {
   .inner {

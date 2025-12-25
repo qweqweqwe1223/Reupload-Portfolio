@@ -216,6 +216,8 @@ closeBtns.forEach(btn => {
 });
 
 
+// More Work popup ================
+
 const otherOpens = document.querySelectorAll('.otherOpen');
 const otherPopup = document.querySelectorAll('.other_popup');
 const otherCloses = document.querySelectorAll('.dim');
@@ -225,14 +227,37 @@ otherOpens.forEach(otherOpen => {
     const openTarget = otherOpen.dataset.popup; 
     const targetPopup = document.querySelector(`.other_popup[data-popup="${openTarget}"]`);
     targetPopup.classList.add('active');
+    wrap.style.overflow = 'hidden';
   })
 })
 
 otherCloses.forEach(otherClose => {
   otherClose.addEventListener('click', () => {
     otherClose.closest('.other_popup').classList.remove('active');
+    wrap.style.overflow = 'auto';
   })
 })
+
+
+// more work motion graphics 
+
+const openVid = document.querySelector('.motion_open');
+const motion = document.querySelector('.other_popup.motion');
+const video = motion.querySelector('.popup_video');
+
+openVid.addEventListener('click', () => {
+  motion.classList.add('active');
+  video.currentTime = 0;
+  video.play();
+});
+
+otherCloses.forEach(close => {
+  close.addEventListener('click', () => {
+    motion.classList.remove('active');
+    video.pause();
+    video.currentTime = 0;
+  });
+});
 
 
 // uiux 팝업창 열기 ==========================================
@@ -252,6 +277,7 @@ closeUiux1.forEach(dim => {
     Proto.classList.remove('active');
   });
 });
+
 
 
 // meal Alone Popup
@@ -283,4 +309,21 @@ closeUiux3.forEach(dim => {
   dim.addEventListener('click', () => {
     gifty.classList.remove('active');
   });
+});
+
+
+const responsive = document.querySelector('.responsive_notice');
+
+window.addEventListener('load', () => {
+  responsive.classList.add('show');
+
+  setTimeout(() => {
+    responsive.classList.remove('show');
+    responsive.classList.add('eventout');
+  }, 4000);
+
+  responsive.addEventListener('click', () => {
+    responsive.classList.remove('show');
+    responsive.classList.add('eventout');
+  })
 });

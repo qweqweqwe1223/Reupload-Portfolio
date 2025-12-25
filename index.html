@@ -313,44 +313,111 @@
         <div class="swiper otherslide">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="other_hover otherOpen" data-popup="snsAdd01"><span>Detail View</span>
-                <span>SNS 광고 디자인 01</span>
+              <div class="other_hover otherOpen" data-popup="snsAdd"><span>Detail View</span>
+                <span>SNS 광고 디자인</span>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="other_hover otherOpen" data-popup="snsAdd02"><span>Detail View</span>
-                <span>SNS 광고 디자인 02</span>
+              <div class="other_hover otherOpen" data-popup="postcard"><span>Detail View</span>
+                <span>문구디자인</span>
               </div>
             </div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+            <div class="swiper-slide">
+              <div class="other_hover otherOpen" data-popup="badge"><span>Detail View</span>
+                <span>드로잉 작업&#40;뱃지, 키링, 포스터&#41;</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="other_hover otherOpen" data-popup="package"><span>Detail View</span>
+                <span>CongStick Redesign / 패키지디자인</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="other_hover otherOpen" data-popup="3d"><span>Detail View</span>
+                <span>3D modeling</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="other_hover otherOpen motion_open"><span>Detail View</span>
+                <span>애니메이션 모션그래픽</span>
+              </div>
+            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
-      </div>
     </section>
 
     <!-- More Works의 각 슬라이드 팝업창입니다. -->
-    <div class="other_popup" data-popup="snsAdd01">
+    <div class="other_popup" data-popup="snsAdd">
       <div class="dim">
-        <div class="hover_img">
-          <img src="./img/sns광고1.png" alt="sns광고디자인">
-          <span>화장품 관련 SNS 광고 디자인</span>
+        <div class="hover_img multiple_img">
+          <div class="popup_box">
+            <img src="./img/sns광고1.png" alt="sns광고">
+            <img src="./img/sns광고2.png" alt="sns광고02">
+          </div>
+          <span>sns광고 디자인 작업입니다.</span>
         </div>
       </div>
     </div>
 
-    <div class="other_popup" data-popup="snsAdd02">
+    <div class="other_popup" data-popup="postcard">
       <div class="dim">
-        <div class="hover_img">
-          <img src="./img/sns광고2.png" alt="sns광고디자인">
-          <span>SNS 광고 배너를 디자인하였습니다.</span>
+        <div class="hover_img multiple_img">
+          <div class="popup_box">
+            <img src="./img/morewroks/post01.jpg" alt="문구디자인" class="post01">
+            <img src="./img/morewroks/post02.jpg" alt="문구디자인" class="post02">
+            <img src="./img/morewroks/note.jpg" alt="문구디자인" class="post03">
+          </div>
+          <span>엽서&노트 / 문구 디자인 작업입니다.</span>
         </div>
       </div>
     </div>
 
+
+    <div class="other_popup" data-popup="badge">
+      <div class="dim">
+        <div class="hover_img multiple_img">
+          <div class="popup_box">
+            <img src="./img/morewroks/Pin-Button-Badge-Mockup 1.png" alt="뱃지디자인">
+            <img src="./img/morewroks/badgepopup02.png" alt="키링디자인">
+            <img src="./img/morewroks/badgepopup03.png" alt="포스터">
+          </div>
+          <span>드로잉 작업과 실제 발주를 넣은 디자인입니다.&#40;뱃지, 키링, 포스터&#41;</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="other_popup" data-popup="package">
+      <div class="dim">
+        <div class="hover_img">
+          <span class="package_notice">아래로 스크롤 해주세요</span>
+          <img src="./img/morewroks/package_popup.png" alt="package 상세페이지" class="package">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="other_popup" data-popup="3d">
+      <div class="dim">
+        <div class="hover_img multiple_img">
+          <div class="popup_box">
+            <img src="./img/morewroks/3d01.png" alt="3d모델링01" class="widthUp">
+            <img src="./img/morewroks/3d02.png" alt="3d모델링02" class="widthUp">
+          </div>
+          <span>blender을 활용한 3D모델링 작업입니다.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="other_popup motion">
+      <div class="dim">
+        <div class="hover_img">
+          <video class="popup_video" src="./img/morewroks/motion.mp4" muted playsinline controls></video>
+          <span>모션그래픽 애니메이션 작업입니다.</span>
+        </div>
+      </div>
+    </div>
 
 
     <section class="section contact">
@@ -477,15 +544,15 @@
         <div class="description">
           <p class="desName">overview</p>
           <p>레이아웃을 활용한 디자인 연습을 목적으로 제작한 개인 웹사이트입니다. <br>
-평소 좋아하는 노래들을 주제로, 음악을 소개하고 정리할 수 있는 구조로 구성하였습니다.
-</p>
+            평소 좋아하는 노래들을 주제로, 음악을 소개하고 정리할 수 있는 구조로 구성하였습니다.
+          </p>
         </div>
         <div class="description">
           <p class="desName">skill & Detail</p>
           <p>figma / Adobe illustrator, Photoshop / HTML5+CSS3<br>
             사진과 오브젝트, 텍스트의 배치를 통해 가독성과 시각적 안정감을 고려했으며,
-블루 컬러를 기반으로 여름의 분위기를 살려 디자인했습니다.
-           </p>
+            블루 컬러를 기반으로 여름의 분위기를 살려 디자인했습니다.
+          </p>
         </div>
 
         <div class="popupImg">
@@ -516,12 +583,12 @@
         <div class="description">
           <p class="desName">overview</p>
           <p>부산국제영화제 공식 웹사이트를 분석해 클론 코딩한 프로젝트입니다. <br>
-전체 레이아웃 구조와 인터랙션 구현에 중점을 두었으며, 디자인 요소를 실제 웹 화면으로 구현하는 과정을 통해 웹 기술과 구조를 학습하는 것을 목표로 제작했습니다.</p>
+            전체 레이아웃 구조와 인터랙션 구현에 중점을 두었으며, 디자인 요소를 실제 웹 화면으로 구현하는 과정을 통해 웹 기술과 구조를 학습하는 것을 목표로 제작했습니다.</p>
         </div>
         <div class="description">
           <p class="desName">skill & Detail</p>
-          <p>figma / PremierePro / HTML5+CSS3+javascript(jQuery)+AOS+Swiper.js  <br>
-          애니메이션과 스와이퍼를 활용하여 클론코딩을 진행하였습니다.</p>
+          <p>figma / PremierePro / HTML5+CSS3+javascript(jQuery)+AOS+Swiper.js <br>
+            애니메이션과 스와이퍼를 활용하여 클론코딩을 진행하였습니다.</p>
         </div>
 
         <div class="popupImg">
@@ -531,6 +598,10 @@
     </div>
 
 
+    <div class="responsive_notice">
+      <p>본 웹사이트는 반응형 작업이 완료되지 않았습니다. <br>
+<b>1920×1080(FHD)</b>해상도에서 최적의 화면을 확인하실 수 있습니다.</p>
+    </div>
 
   </div>
 
