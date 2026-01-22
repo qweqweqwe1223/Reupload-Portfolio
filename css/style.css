@@ -465,7 +465,7 @@ section.web_design .swiper-slide.video {
 }
 
 section.web_design .swiper-slide.rbfy {
-  background: url(../img/rbfy.png) no-repeat top/cover;
+  background: url(../img/nouve.png) no-repeat top/cover;
 }
 
 
@@ -857,19 +857,31 @@ section.uiux .uiux_list span {
 }
 
 .section.other .swiper-slide:nth-child(3) {
-  background: url(../img/morewroks/Pin-Button-Badge-Mockup\ 1.png) no-repeat center/cover;
+  background: url(../img/morewroks/content_thumb.png) no-repeat center/cover;
 }
 
 .section.other .swiper-slide:nth-child(4) {
-  background: url(../img/morewroks/package.png) no-repeat center/cover;
+  background: url(../img/morewroks/Pin-Button-Badge-Mockup\ 1.png) no-repeat center/cover;
 }
 
 .section.other .swiper-slide:nth-child(5) {
-  background: url(../img/morewroks/3d_thumb.png) no-repeat center/cover;
+  background: url(../img/morewroks/package.png) no-repeat center/cover;
 }
 
 .section.other .swiper-slide:nth-child(6) {
-  background: url(../img/morewroks/motion_thumb.png) no-repeat center/cover;
+  background: url(../img/morewroks/3d_thumb.png) no-repeat center/cover;
+}
+
+.section.other .swiper-slide:nth-child(7) {
+  background: url(../img/morewroks/mealalone_thumb.png) no-repeat center/cover;
+}
+
+.section.other .swiper-slide:nth-child(8) {
+  background: url(../img/morewroks/banner_thumb.png) no-repeat center/cover;
+}
+
+.section.other .swiper-slide:nth-child(9) {
+  background: url(../img/morewroks/AI_thumb.png) no-repeat center/cover;
 }
 
 
@@ -948,6 +960,22 @@ section.uiux .uiux_list span {
   width: 70%;
 }
 
+/* 상세페이지 디자인 팝업 ==== */
+
+.other_popup .dim .hover_img.multiple_img .popup_box.more_content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: start;
+}
+
+.other_popup .dim .hover_img.multiple_img .popup_box .content_img {
+  width: 30%;
+  display: block;
+}
+
 /* package popup */
 
 .other_popup .dim .hover_img .package_notice {
@@ -979,8 +1007,26 @@ section.uiux .uiux_list span {
   height: auto;
 }
 
+/* 배너디자인 사이즈 */
+.popup_box .banner_size {
+  width: 40% !important;
+}
 
-/* section contact */
+/* AI 페이지 이동 */
+.hover_img.multiple_img.AIpage {
+  position: relative;
+  height: 100%;
+}
+
+.notion_page {
+  position: absolute;
+  top: 30px;
+  width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
+}
+
+/* section contact =================================== */
 
 section.contact {
   position: relative;
@@ -1147,6 +1193,12 @@ section.contact .text p::after {
   background-position: center -120px;
 }
 
+.popup-content .nouve_thumb {
+  background: url(../img/nouve.png) no-repeat;
+  background-size: cover;
+  background-position: center -300px;
+}
+
 
 .popup-content figure div {
   position: absolute;
@@ -1227,6 +1279,17 @@ section.contact .text p::after {
   padding-bottom: 50px;
 }
 
+.popupImg .shortPage {
+  background: transparent;
+  width: 200px;
+  margin: 0;
+}
+
+.popupImg .shortPage img {
+  display: block;
+  width: 100%;
+  padding-bottom: 50px;
+}
 
 
 /* 반응형 */
